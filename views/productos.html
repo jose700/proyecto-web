@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#bla" />
+    <title>Productos</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!--Boxicons-->
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="stylesheet" href="../css/_footer.css">
+
+</head>
+
+<body>
+    <header class="nabvar-content ">
+        <ul class="navbar-container nav" id="pills-tab" role="tablist">
+            <li class="nav-item " role="presentation">
+                <a href="/index.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item " role="presentation">
+                <a href="../views/login.html" class="nav-link">Ingresar</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link " id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Productos</a>
+            </li>
+            <li class="nav-item active" role="presentation">
+                <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" aria-controls="pills-contact">Carrito</a>
+            </li>
+            <!--<li class="nav-item" role="presentation">
+                <a href="../views/Nosotros.html" class="nav-link">Nosotros</a>
+            </li>-->
+        </ul>
+    </header>
+
+
+    <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+        El producto fue añadido correctamente al carrito!
+    </div>
+    <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+        El producto fue eliminado satisfactoriamente!
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            1
+        </div>
+        <!---- <div class="input">
+            <input type="text" placeholder="Búsqueda rápida">
+            <button class="buscar">Buscar</button>
+            <i class='icon-input bx bx-search-alt-2'></i>
+        </div>-->
+        <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <h2><strong>Productos</strong></h2>
+            <br>
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">KIT 1 720p</h5>
+                        <img src="../img/kit1-720.jpg" class="card-img-top" alt="kit-1">
+                        <div class="card-body">
+                            <p class="card-text description">-DVR 4CH 1080LITE 720P -1 CAMARAS DOMO 720P -1 VIDEO BALLUMS -1 FUENTES -1 PAR CONECTORES - DISCO DURO 1TB
+
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 240</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button producto" precio="150">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">KIT 2 Domo 720p</h5>
+                        <img src="../img/domo2.jpg" class="card-img-top" alt="kit-1">
+                        <div class="card-body">
+                            <p class="card-text description">-DVR 4CH 1080LITE 720P -1 CAMARAS DOMO 720P -1 VIDEO BALLUMS -1 FUENTES -1 PAR CONECTORES - DISCO DURO 1TB
+
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 270</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button producto" precio="150">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">KIT 3 Cámara Domo 720p</h5>
+                        <img src="../img/domo3.jpg" class="card-img-top" alt="kit-1">
+                        <div class="card-body">
+                            <p class="card-text description">-DVR 4CH 1080LITE 720P -1 CAMARAS DOMO 720P -1 VIDEO BALLUMS -1 FUENTES -1 PAR CONECTORES - DISCO DURO 1TB
+
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 250</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button producto" precio="150">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">KIT de CCTV 8CH</h5>
+                        <img src="../img/kit19.png" class="card-img-top" alt="kit-1">
+                        <div class="card-body">
+                            <p class="card-text description">- 1 DVR PARA 8 CÁMARAS FULL HD 1080P - 4 CAMARAS TUBO EXTERIOR FULL HD 1080P - 4 CAMARAS DOMO INTERIOR FULL HD 1080P - 8 ADAPTADORES DE VOLTAJE 12V 1,25 AMPERIOS - 8 PAREJAS DE VIDEO BALUN HDTVI 1080P
+
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 450</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button producto" precio="150">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">KIT de 8CH</h5>
+                        <img src="../img/kit1-8CH.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text description">-DVR 8CH 1080LITE 720P -4 CAMARAS DOMO 720P -4 CAMARAS TUBO 720P -8 VIDEO BALLUMS -8 FUENTES -8 PARES CONECTORES - DISCO DURO 1TB
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 415</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Sistemas de Alarmas</h5>
+                        <img src="../img/alarma.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text description">–1 PANEL PARADOX SP4000 –1 CAJA METÁLICA PARA PANEL –1 TECLADO LED CABLEADO K636 – 1 TRANSFORMADOR 16.5 VAC 40 W –1 BATERIA RECARGABLE –BAT-12V4A –1 SIRENA 12 VDC
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 150</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Broadlink 3 Mini</h5>
+                        <img src="../img/control-remoto.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text description">El RM MINI 3 sólo basta con vincular el aparato con el dispositivo y usted podrá usar su smartphone para controlar diferentes aplicaciones en cualquier momento y desde cualquier lugar.
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 30.00</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Controlador inteligente</h5>
+                        <img src="../img/interruptor.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text description">Controlador inteligente universal Broadlink RM Pro RM2 Smart Home Domótica Automatización WIFI + IR + RF Interruptor remoto VIA IOS Android</p>
+                            <h5 class="">Precio: <span class="precio">$ 49.00</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Alambre</h5>
+                        <img src="../img/alambre.png" class="card-img-top" alt="alambre">
+                        <div class="card-body">
+                            <p class="card-text description">
+                                Alambre para cerco eléctrico galvanizado
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 37.00</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Aisladores</h5>
+                        <img src="../img/aisladores.png" class="card-img-top" alt="aisladores">
+                        <div class="card-body">
+                            <p class="card-text description">
+                                Aisladores templadores alambres, precio unitario
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 0.30</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Tubos</h5>
+                        <img src="../img/tubos.png" class="card-img-top" alt="tubos">
+                        <div class="card-body">
+                            <p class="card-text description">
+                                Tubos para cerco eléctrico
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 4.00</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Bateria</h5>
+                        <img src="../img/bateria.png" class="card-img-top" alt="bateria">
+                        <div class="card-body">
+                            <p class="card-text description">
+                                Batería 12v 7ah para Alarma Cerco Eléctrico
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 15.00</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Bateria</h5>
+                        <img src="../img/bateria-recargable.png" class="card-img-top" alt="bateria-recargable">
+                        <div class="card-body">
+                            <p class="card-text description">
+                                BATERIA RECARGABLE – BAT-12V4A
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 15.00</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Letrero</h5>
+                        <img src="../img/letrero.png" class="card-img-top" alt="letrero">
+                        <div class="card-body">
+                            <p class="card-text description">
+                                Letrero De Advertencia para Cerco Eléctrico
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 1.50</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Sirena</h5>
+                        <img src="../img/sirena.png" class="card-img-top" alt="sirena">
+                        <div class="card-body">
+                            <p class="card-text description">
+                                SIRENA 12 VDC 15 W
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 12.00</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center mb-4">
+                    <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+                        <h5 class="card-title pt-2 text-center">Caja</h5>
+                        <img src="../img/caja.png" class="card-img-top" alt="caja">
+                        <div class="card-body">
+                            <p class="card-text description">
+                                CAJA METÁLICA PARA PANEL
+                            </p>
+                            <h5 class="">Precio: <span class="precio">$ 16.00</span></h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn button">Añadir a Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <br>
+            <table class="table table-primary table-hover">
+                <thead>
+                    <tr class="text-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Productos</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                </tbody>
+            </table>
+            <br><br>
+            <div class="row mx-4">
+                <div class="col">
+                    <h3 class="itemCartTotal text-dark">Total: 0</h3>
+                </div>
+                <div class="text-black">Seleccionar metodo de pago</div>
+                <button class="form-select form-select btn-dark text-white" aria-label=".form-select-lg example" data-toggle="modal" data-target="#Registro">Consumidor Final</button>
+
+                <!--<button class="form-select form-select btn-dark text-white" aria-label=".form-select-lg example" data-toggle="modal" data-target="#Inicio">Via Paypal</button>-->
+                <!--<select class="form-select form-select btn-dark text-white" aria-label=".form-select-lg example">
+                    <option selected class="text-black">Seleccionar Metodo de Pago</option>
+                
+                        <option value="1" data-toggle="modal" data-target="#Registro">Consumidor Final</option>
+                        <option value="2" data-toggle="modal" data-target="#Inicio">Via Paypal</option>
+                </select>-->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="Inicio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<h3>Ingrese Datos</h3>-->
+                    <button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="comprar-form" method="" autocomplete="off">
+                        <div class="form-group">
+                            <input type="text" id="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" id="email" class="form-control" placeholder="Nombres y Apellidos" required>
+                        </div>
+                        <br>
+                        <a href="../views/pagar.html" type="submit" class="btn btn-secondary btn-block" target="blank">Pagar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal 2-->
+    <div class="modal fade" id="Registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignin" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-center">Ingresar datos
+                    </h3>
+                    <button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="pagar-form" method="" autocomplete="off">
+                        <div class="form-group">
+                            <input type="text" id="nombres" class="form-control" placeholder="Nombres" pattern="[Aa-Zz]" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" id="apellidos" class="form-control" placeholder="Apellidos" pattern="[Aa-Zz]" required>
+                        </div>
+                        <br>
+                        <p>Por favor seleccione su ciudad</p>
+                        <select class="form-control" Value="Seleccione su ciudad" id="ciudad">
+                                <option id="ciudad">24 de Mayo</option>
+                                <option id="ciudad">Bolívar</option>
+                                <option id="ciudad">Chone</option>
+                                <option id="ciudad">El Carmen</option>
+                                <option id="ciudad">Eloy Alfaro</option>
+                                <option id="ciudad">Jama</option>
+                                <option id="ciudad">Jaramijó</option>
+                                <option id="ciudad">Jipijapa</option>
+                                <option id="ciudad">Junín</option>
+                                <option id="ciudad">Manta</option>
+                                <option id="ciudad">Montecristi</option>
+                                <option id="ciudad">Olmedo</option>
+                                <option id="ciudad">Pajan</option>
+                                <option id="ciudad">Pedernales</option>
+                                <option id="ciudad">Pichincha</option>
+                                <option id="ciudad">Portoviejo</option>
+                                <option id="ciudad">Puerto López</option>
+                                <option id="ciudad">Rocafuerte</option>
+                                <option id="ciudad">San Vicente</option>
+                                <option id="ciudad">Santa Ana</option>
+                                <option id="ciudad">Sucre</option>
+                                <option id="ciudad">Tosagua</option>
+                        </select>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" id="direccion" class="form-control" placeholder="Direccion" pattern="[Az-Za-0-9]" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" id="telefono" class="form-control" placeholder="Telefono" pattern="[0-9_0-9]{1, 10}" maxlength="10" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" id="email" class="form-control" placeholder="Email" pattern="[A-Za-z0-9_-@]" required>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-block button">Realizar compra</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <br>
+
+    <!--footer---------------------------->
+
+    <footer>
+        <div class="container-3">
+            <!--PIE DE PAGINA-->
+            <div class="redes-sociales">
+                <label>Redes sociales</label><br>
+                <a href="https://www.facebook.com/SecuritMastered.ec/" target="blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contactanos">
+                <label>Contactanos</label><br>
+                <i class="fab fa-whatsapp"></i><span>0912345678</span><br>
+            </div>
+            <div class="pie-final">
+                <label>Security Master ® | Todos los derechos reservados</label>
+            </div>
+        </div>
+    </footer>
+
+    <!--compra desde whatsapp-->
+    <div>
+        <a href="https://wa.me/593963776411" class="float" target="_blank">
+            <p>Comprar desde whatsapp</p>
+            <i class="fab fa-whatsapp my-float"></i>
+        </a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firebase-firestore."></script>-->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-storage.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+
+    <script src="https://www/firebase/8.7.0/firebase-firestore.js"></script>
+
+
+    <!--login-->
+    <script src="../js/conexion.js"></script>
+    <script src="../js/pagos2.js"></script>
+    <script src="../js/index.js"></script>
+
+
+</body>
+
+</html>

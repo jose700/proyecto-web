@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Todos los derechos reservados." />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <!---HOJAS DE ESTILO-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/_footer.css">
+
+    <!--BOXICONS-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!--Icono-->
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <!--inicio del div-->
+    <div id="app">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <a href="/index.html" class="nav-item">Inicio</a>
+                <a href="#" class="nav-item">Ingresar</a>
+                <a href="../views/productos.html" class="nav-item">Productos</a>
+                <a href="../views/Nosotros.html" class="nav-item">Nosotros</a>
+            </div>
+        </div>
+    </div>
+    <!--formulario -->
+    <section class="container">
+        <h1 class="text-center">Unete a nuestra comunidad</h1>
+        <hr class="linea">
+        <div class="login">
+            <div class="login-img">
+                <img src="../img/logo.png" alt="logo" width="550px"><b></b>
+                <p>Inicia sesion para estar al dia con los nuevos productos y ofertas o registrate si aun no lo haces es <strong>gratis</strong>!</p>
+            </div>
+            <div class="login-form">
+                <div class="form-container card animated flipInY">
+
+                    <div class="separador">
+                        <span onclick="login()">Iniciar</span>
+                        <span onclick="registrar()">Registrarse</span>
+                        <hr id="indicador">
+                    </div>
+
+                    <form onsubmit="Bienvenido()" id="formulario-login" action="" autocomplete="off">
+                        <div>
+                            <input type="text" placeholder="Correo electronico" id="email" name="email">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Contraseña" id="password" name="password">
+                        </div>
+
+                        <button type="submit" class="boton" id="validar-login">Iniciar sesion</button>
+                        <br>
+                        <button type="button" class="google" id="googleLogin" onclick="LoginGoogle()">Iniciar con Google<i class="fab fa-google"></i></button>
+                        <br>
+                        <button type="button" class="facebook" id="facebookLogin" onclick="LoginFacebook()">Iniciar con Facebook<i class="fab fa-facebook"></i></button>
+                        <a href="#" data-toggle="modal" data-target="#RecuperarContra" class="text-primary">Olvido su contraseña?</a>
+                    </form>
+                    <form id="formulario-registro" action="" autocomplete="off">
+                        <div>
+                            <input type="text" placeholder="Nombre" id="nombres" name="nombre">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Apellidos" id="usuarioR" name="usuario">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Correo electronico" id="correo" name="correo">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña">
+
+                            <button type="submit" class="boton">Registrarme</button>
+                    </form>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="RecuperarContra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-center">Recuperar contraseña</h3>
+                    <button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <form autocomplete="off" id="formulario-reset" action="" method="GET">
+                        <div class="form-group">
+                            <p>Por favor ingrese su correo electronico para poder recuperar su contraseña</p>
+                            <input type="text" id="email2" class="form-control" placeholder="Correo electronico">
+                        </div>
+                        <br>
+                        <button type="submit" class="enviar" onclick="sendPasswordReset()">Enviar</button>
+                        <!-- <a href="#" type="submit" onclick="forgotPass()">Enviar</a>-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-3">
+            <!--PIE DE PAGINA-->
+            <div class="redes-sociales">
+                <label>Redes sociales</label><br>
+                <a href="https://www.facebook.com/SecuritMastered.ec/" target="blank"><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contactanos">
+                <label>Contactanos</label><br>
+                <i class="fab fa-whatsapp"></i><span>0912345678</span><br>
+            </div>
+            <div class="pie-final">
+                <label>Security Master ® | Todos los derechos reservados</label>
+            </div>
+        </div>
+    </footer>
+
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+    <!--<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firebase-firestore."></script>-->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-storage.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="../js/conexion.js"></script>
+    <script src="../js/basedatos.js"></script>
+    <script src="../js/recuperarcontraseña.js"></script>
+    <script src="../js/bienvenido.js"></script>
+    <script>
+    </script>
+
+
+
+    <!--<script src="../js/recuperarcontraseña.js"></script>-->
+
+</body>
+
+</html>

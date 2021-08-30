@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="../css/nosotros.css">
+    <link rel="stylesheet" href="../css/_footer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ubicacion.css">
+    <!--Bootswatch
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">-->
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!--Icono-->
+    <link rel="shortcut icon" href="public/ico/logo.ico" type="image/x-icon">
+    <!-- ANIMATE.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiv_BBNb9Tj3cBDT_GmVdE2LejBTrOu3A&callback=initialize&libraries=&v=weekly" defer></script>
+    <script src="../js/ubicacion.js"></script>
+</head>
+
+<body>
+    <!--inicio del div-->
+    <div id="app">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <a href="/index.html" class="nav-item">Inicio</a>
+                <a href="../views/login.html" class="nav-item">Ingresar</a>
+                <a href="../views/productos.html" class="nav-item">Productos</a>
+                <a href="#" class="nav-item">Nosotros</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="container">
+        <h1 class="text-center">Acerca de nosotros</h1>
+        <hr>
+        <div class="contenedor container">
+            <div class="imagen">
+                <img class="animated flipInY" src="../img/logo.png" alt="">
+            </div>
+            <div class="nosotros">
+                <p class="text-justify">
+                    Security Mastered es una pyme ecuatoriana ubicada en la calle 304 y avenida 204 en el barrio Maria Auxiliadors #1 de la ciudad de Manta.
+                    <br><br><strong>MISION.</strong><br> Satisfacer las necesidades, en el ámbito de la seguridad electrónica, mediante la venta de productos de calidad y de servicios siempre brindados por un personal altamente calificado, que nos permita
+                    garantizar así, credibilidad, confiabilidad y tranquilidad en nuestros clientes.
+                    <br><br><strong>VISION.</strong><br> Seremos la empresa referencia del país en el área de la seguridad electrónica, gracias a la calidad de nuestros productos, servicios, y constante implementación de nuevas tecnologías
+                </p>
+            </div>
+        </div>
+    </section>
+    <h2 class="text">Ubicacion</h2>
+    <div id="street-view"></div>
+    <!--footer---------------------------->
+    <!--social-links-and-phone-number----------------->
+    <footer>
+        <div class="container-3">
+            <!--PIE DE PAGINA-->
+            <div class="redes-sociales">
+                <label>Redes sociales</label><br>
+                <a href="https://www.facebook.com/SecuritMastered.ec/" target="blank"><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contactanos">
+                <label>Contactanos</label><br>
+                <i class="fab fa-whatsapp"></i><span>0912345678</span><br>
+            </div>
+            <div class="pie-final">
+                <label>Security Master ® | Todos los derechos reservados</label>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

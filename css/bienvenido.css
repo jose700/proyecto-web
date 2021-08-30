@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.icono {
+    color: white;
+}
+
+.icono:hover {
+    color: rgb(4, 185, 209);
+}
+
+.message {
+    color: white;
+    font-size: 14px;
+}
